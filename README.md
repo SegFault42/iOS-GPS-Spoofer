@@ -18,6 +18,30 @@ by [`pymobiledevice3`](https://github.com/doronz88/pymobiledevice3); this tool i
 the user-facing wrapper (CLI, device selection, the "keep it spoofed while
 connected" supervision loop, clean teardown).
 
+## Screenshots
+
+### Fixed GPS location
+
+Click a spot on the map (or type coordinates / pick a preset) and the connected
+iPhone reports that exact location for as long as the tool runs.
+
+![Fixed-point mode](img/fix.png)
+
+The spoofed position as the iPhone itself sees it — Apple Park, the mid-Atlantic,
+and the Eiffel Tower:
+
+| Apple Park | North Atlantic | Eiffel Tower |
+|:---:|:---:|:---:|
+| ![](img/IMG_0111.PNG) | ![](img/IMG_0112.PNG) | ![](img/IMG_0113.PNG) |
+
+### Route
+
+Drop waypoints A → B and any points in between, set a duration (h : m : s) or a
+speed (km/h), and the iPhone moves along the path at constant speed. Optionally
+loops.
+
+![Route mode](img/route.png)
+
 ## Requirements
 
 - macOS with Xcode / Swift 6 toolchain
