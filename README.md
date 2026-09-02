@@ -18,6 +18,20 @@ by [`pymobiledevice3`](https://github.com/doronz88/pymobiledevice3); this tool i
 the user-facing wrapper (CLI, device selection, the "keep it spoofed while
 connected" supervision loop, clean teardown).
 
+## Download
+
+No build required — grab the DMG from the
+**[Releases page](https://github.com/SegFault42/iOS-GPS-Spoofer/releases/latest)**:
+
+### [⬇ Download the latest release](https://github.com/SegFault42/iOS-GPS-Spoofer/releases/latest)
+
+Open the DMG, drag **iOS GPS Spoofer** to Applications. First launch:
+**right-click ▸ Open** (the app is ad-hoc signed, so Gatekeeper asks once). Then
+prepare your iPhone — see **[IPHONE-SETUP.md](IPHONE-SETUP.md)**.
+
+Want to build it yourself instead? See [Setup](#setup) /
+[Package as a DMG](#package-as-a-dmg).
+
 ## Screenshots
 
 ### Fixed GPS location
@@ -108,6 +122,17 @@ The bundled venv's Python still references this machine's Homebrew Python, so th
 default DMG runs on this Mac and Macs with the same `brew install python@3.x`.
 For a portable build use `--no-venv` and have users install `pymobiledevice3`
 themselves. First launch of an ad-hoc-signed app: **right-click ▸ Open**.
+
+**Publishing a release** (maintainer):
+
+```bash
+VERSION=1.0.0 ./package-dmg.sh
+gh release create v1.0.0 "dist/iOS-GPS-Spoofer-1.0.0.dmg" \
+  --title "v1.0.0" --notes "iOS GPS Spoofer 1.0.0"
+```
+
+The **[Download](#download)** link points at `releases/latest`, so it always
+resolves to the newest published release.
 
 ## CLI
 
